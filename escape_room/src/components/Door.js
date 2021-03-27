@@ -1,4 +1,7 @@
 import React from 'react'
+import door_closed from '../assets/door_closed.jpg'
+import door_open from '../assets/door_open.jpg'
+
 
 
 class Door extends React.Component {
@@ -23,7 +26,7 @@ class Door extends React.Component {
     return (
       <div>i'm the door!
 
-       { (this.state.openDoor) ? <button className='door_button' onClick={this.doorToggle}>i'm closed</button> : <button className='door_button'  onClick={this.doorToggle}>i'm open</button> }
+        { (this.state.openDoor) ? <button className='door_button' onClick={this.doorToggle}><img src={door_closed}/></button> : <button className='door_button'  onClick={this.doorToggle}><img src={door_open}/></button> }
 
       </div>
     )
