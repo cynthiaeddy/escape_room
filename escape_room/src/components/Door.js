@@ -24,9 +24,9 @@ class Door extends React.Component {
 
   render() {
     return (
-      <div>i'm the door!
-
-        { (this.state.openDoor) ? <button className='door_button' onClick={this.doorToggle}><img src={door_closed}/></button> : <button className='door_button'  onClick={this.doorToggle}><img src={door_open}/></button> }
+      <div>
+{/* <button className='key_button'></button> */}
+        { (this.state.openDoor) ? <button className='key_button' onClick={this.doorToggle}><img src={door_open}/></button> : <button className='door_button'  onClick={this.doorToggle}><img src={door_closed}/></button> }
 
       </div>
     )
@@ -34,4 +34,10 @@ class Door extends React.Component {
 
 }
 
+
+
+
+
 export default Door
+
+// { (this.state.openDoor) ? <button className='door_button' onClick={this.doorToggle}><img src={door_open}/></button> : <button className='door_button'  onClick={this.doorToggle}><img src={door_closed}/></button> }
