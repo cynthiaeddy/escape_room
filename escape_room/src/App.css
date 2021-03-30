@@ -29,17 +29,37 @@ button:focus {
 .door_container {
 	display: flex;
 	position: relative;
-	justify-content: center;
-	width: 40%;
-	margin: auto;
-}
-img {
-	border: 2px solid black;
-	width: 100%;
+	/* justify-content: center; */
+	width: 60%;
+  height: fit-content
+	/* margin: auto; */
 }
 
+img.outer_door {
+  width: 100%;
+  border: 2px solid black;
+  z-index: 10;
+  position: absolute;
+  top: -16vh
+}
+
+img.inner_door {
+  width: 75%;
+  border: 2px solid black;
+  z-index: 1;
+  position: absolute;
+  top: -6vh;
+  left: 7vw
+}
+
+img.final_door {
+  border: 2px solid black;
+  width: 50%;
+  margin-left: 15vw;
+  margin-top: 3vh;
+}
 .circle {
-	width: 100px;
+  width: 100px;
 	height: 100px;
 	border-radius: 50%;
 	border: 2px solid black;
@@ -47,5 +67,5 @@ img {
 	background: 'white';
 }
 .circle.move_right {
-	transform: translate();
+  transform: translate();
 }

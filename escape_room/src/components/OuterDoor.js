@@ -3,8 +3,9 @@ import door_closed from "../assets/door_closed.jpg";
 import door_open from "../assets/door_open.jpg";
 import plant from "../assets/plant.jpg";
 
-const DoorAltToo = () => {
-  const [isSelected, setSelected] = useState(door_closed);
+const OuterDoor = () => {
+  const doors = { door_closed, door_open };
+  const [isSelected, setSelected] = useState(doors.door_closed);
   const [isCircleMoved, setCircleMoved] = useState(true);
 
   const startStyle = {
@@ -12,7 +13,6 @@ const DoorAltToo = () => {
     left: "40px",
     transition: "left 1s",
   };
-
   const endStyle = {
     top: "160px",
     left: "700px",
@@ -25,9 +25,12 @@ const DoorAltToo = () => {
 
   return (
     <div>
-      <img alt={"doors"} src={isSelected} className="final_door" />
-      <button onClick={() => setSelected(door_open)} className="key_button">
-        final
+      <img className="outer_door" alt={"doors"} src={isSelected} />
+      <button
+        onClick={() => setSelected(doors.door_open)}
+        className="key_button"
+      >
+        outer
       </button>
       <button
         onClick={moveCircle}
@@ -37,4 +40,4 @@ const DoorAltToo = () => {
     </div>
   );
 };
-export default DoorAltToo;
+export default OuterDoor;
