@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import door_closed from '../assets/door_closed.jpg'
 import door_open from '../assets/door_open.jpg'
+import plant from '../assets/plant.jpg'
 
 
 
 const DoorAltToo = () => {
 
-  const [isSelected, setSelected] = useState(true);
+  const doors = {door_closed, door_open}
+  const [isSelected, setSelected] = useState(doors.door_closed);
   const [isCircleMoved, setCircleMoved] = useState(true)
 
   const startStyle = {
@@ -22,21 +24,18 @@ const DoorAltToo = () => {
     transition: 'left 1s',
   }
 
-  const toggleDoor = () => {
-    setSelected(!isSelected);
-  }
+
   const moveCircle = () => {
     setCircleMoved(!isCircleMoved)
   }
 
-  const doors = isSelected ? door_closed : door_open;
   return (
     <div className='door_container'>
-      <button onClick={toggleDoor} className='key_button'>
+      <img alt={'doors'} src={isSelected} />
+      <button onClick={()=> setSelected(doors.door_open)} className='key_button'>
       </button>
       <button onClick={moveCircle} className='circle move_right'
         style={isCircleMoved ? startStyle : endStyle}></button>
-        <img alt={'doors'} src={doors} />
     </div>
   )
 }
