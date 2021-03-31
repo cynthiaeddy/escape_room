@@ -10,15 +10,15 @@ const DoorAltToo = () => {
   const [isCircleMoved, setCircleMoved] = useState(true)
 
   const startStyle = {
-    top: '160px',
-    left: '40px',
+    top: '185px',
+    left: '25px',
     transition: 'left 1s'
 
 
   }
   const endStyle = {
-    top: '160px',
-    left: '700px',
+    top: '185px',
+    left: '315px',
     transition: 'left 1s',
   }
 
@@ -36,6 +36,9 @@ const DoorAltToo = () => {
       </button>
       <button onClick={moveCircle} className='circle move_right'
         style={isCircleMoved ? startStyle : endStyle}></button>
+
+      <button  className='half_circle move_right'>
+       </button>
         <img alt={'doors'} src={doors} />
     </div>
   )
