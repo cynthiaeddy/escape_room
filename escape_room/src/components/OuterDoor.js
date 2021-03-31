@@ -4,8 +4,7 @@ import door_open from "../assets/door_open.jpg";
 import plant from "../assets/plant.jpg";
 
 const OuterDoor = () => {
-  const doors = { door_closed, door_open };
-  const [isSelected, setSelected] = useState(doors.door_closed);
+  const [isSelected, setSelected] = useState(door_closed);
   const [isCircleMoved, setCircleMoved] = useState(true);
 
   const startStyle = {
@@ -27,8 +26,8 @@ const OuterDoor = () => {
     <div>
       <img className="outer_door" alt={"doors"} src={isSelected} />
       <button
-        onClick={() => setSelected(doors.door_open)}
-        className="key_button"
+        onClick={() => setSelected(door_open)}
+        className="outer_key_button"
       >
         outer
       </button>

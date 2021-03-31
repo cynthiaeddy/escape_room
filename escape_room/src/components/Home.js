@@ -7,8 +7,6 @@ import InnerDoor from "./InnerDoor";
 const Home = () => {
   return (
     <div className="door_container">
-      <OuterDoor />
-      <InnerDoor />
       <DoorAltToo />
     </div>
   );

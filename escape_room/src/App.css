@@ -11,23 +11,8 @@
 	height: 100vh;
 	background: snow;
 }
-button {
-	border: 5px solid black;
-}
-button:focus {
-	outline: 0;
-}
-
-.key_button {
-	height: 50px;
-	width: 50px;
-	border: 2px solid black;
-	position: absolute;
-	top: 200px;
-	left: 65px;
-}
 .door_container {
-	display: flex;
+  display: flex;
 	position: relative;
 	/* justify-content: center; */
 	width: 60%;
@@ -65,7 +50,37 @@ img.final_door {
 	border: 2px solid black;
 	position: absolute;
 	background: 'white';
+  background: url("assets/plantSq.jpg");
+  background-size: cover;
+
+
+
 }
 .circle.move_right {
   transform: translate();
+}
+
+button {
+  border: 5px solid black;
+}
+button:focus {
+  outline: 0;
+}
+
+.outer_key_button {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  position: absolute;
+  top: 200px;
+  left: 65px;
+  z-index: 30
+}
+.key_button {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  position: absolute;
+  top: 200px;
+  left: 65px;
 }
