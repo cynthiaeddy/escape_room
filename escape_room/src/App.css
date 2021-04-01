@@ -62,3 +62,10 @@ img {
 .circle.move_right {
 	transform: translate();
 }
+.house {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	width: 40%;
+	margin: auto;
+}

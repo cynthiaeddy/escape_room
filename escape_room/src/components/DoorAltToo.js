@@ -1,25 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import door_closed from '../assets/door_closed.jpg'
 import door_open from '../assets/door_open.jpg'
 import door_close2 from '../assets/door_closed.jpg'
 import door_close3 from '../assets/door_closed.jpg'
 import door_close4 from '../assets/door_closed.jpg'
 import door_close5 from '../assets/door_closed.jpg'
-
-
-
+import door_closed6 from '../assets/door_closed.jpg'
 
 const DoorAltToo = () => {
-
-  const [isSelected, setSelected] = useState(true);
+  const [isSelected, setSelected] = useState(true)
   const [isCircleMoved, setCircleMoved] = useState(true)
 
   const startStyle = {
     top: '185px',
     left: '25px',
-    transiti5on: 'left 1s'
-
-
+    transiti5on: 'left 1s',
   }
   const endStyle = {
     top: '185px',
@@ -28,23 +23,25 @@ const DoorAltToo = () => {
   }
 
   const toggleDoor = () => {
-    setSelected(!isSelected);
+    setSelected(!isSelected)
   }
   const moveCircle = () => {
     setCircleMoved(!isCircleMoved)
   }
 
-  const doors = isSelected ? door_close5 : door_open;
+  const doors = isSelected ? door_closed6 : door_open
   return (
-    <div className='door_container'>
-      <button onClick={toggleDoor} className='key_button'>
-      </button>
-      <button onClick={moveCircle} className='circle move_right'
-        style={isCircleMoved ? startStyle : endStyle}></button>
+    <div className="door_container">
+      <button onClick={toggleDoor} className="key_button"></button>
+      <button
+        onClick={moveCircle}
+        className="circle move_right"
+        style={isCircleMoved ? startStyle : endStyle}
+      ></button>
 
-      <button  className='half_circle move_right'>
-       </button>
-        <img alt={'doors'} src={doors} />
+      <button className="half_circle move_right"></button>
+      <img alt={'doors'} src={doors} />
+      <img src={door_close5} />
     </div>
   )
 }

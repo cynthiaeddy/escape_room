@@ -5,18 +5,11 @@ import door_close4 from '../assets/door_close2.jpg'
 import door_close5 from '../assets/door_close2.jpg'
 import door_closed6 from '../assets/door_close2.jpg'
 
-class Key extends React.Component {
-  state = {
-    key_hidden: true,
-  }
-
-  render() {
-    return (
-      <div className="house">
-        <img src={door_close2} />
-        <img src={door_close4} />
-      </div>
-    )
-  }
+const What = () => {
+  return (
+    <div className="door_container">
+      <img src={door_close5} />
+    </div>
+  )
 }
-export default Key
+export default What

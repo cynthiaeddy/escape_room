@@ -1,14 +1,18 @@
 import React from 'react'
 import Door from './Door'
 import DoorAltToo from './DoorAltToo'
-
-
+import Key from './Key'
+import What from './What'
+import Maybe from './Maybe'
+import Huh from './Huh'
 
 const Home = () => {
   return (
     <div>
-
-       <DoorAltToo/>
+      <DoorAltToo />
+      {/* <Key />
+      <Maybe />
+      <Huh /> */}
     </div>
   )
 }
