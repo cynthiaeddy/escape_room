@@ -3,13 +3,14 @@
 }
 
 .container {
-	overflow: hidden !important;
+	/* overflow: hidden !important; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	background: snow;
+	scroll-behavior: auto;
 }
 button {
 	border: 5px solid black;

@@ -5,14 +5,16 @@ import Key from './Key'
 import What from './What'
 import Maybe from './Maybe'
 import Huh from './Huh'
+import Keyer from './Keyer'
 
 const Home = () => {
   return (
     <div>
       <DoorAltToo />
-      {/* <Key />
+      <Key />
       <Maybe />
-      <Huh /> */}
+      <Huh />
+      <Keyer />
     </div>
   )
 }
