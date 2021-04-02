@@ -5,17 +5,19 @@ import door_close2 from '../assets/door_closed.jpg'
 import door_close3 from '../assets/door_closed.jpg'
 import door_close4 from '../assets/door_closed.jpg'
 import door_close5 from '../assets/door_closed.jpg'
-import door_closed6 from '../assets/door_closed.jpg'
+import door_closed6 from '../assets/door_closed6.jpg'
 import plant from '../assets/plant.jpg'
-
-// imageHash: Date.now()
+import chand from '../assets/chand.jpg'
+import chandOn from '../assets/chandOn.jpg'
+import ChandelierOn from './ChandelierOn'
 
 const DoorAltToo = () => {
   const [isLeftDoorSelected, setLeftDoorSelected] = useState(true)
   const [isRightDoorSelected, setRightDoorSelected] = useState(true)
   const [isLeftPlantMoved, setLeftPlantMoved] = useState(true)
   const [isMidPlantMoved, setMidPlantMoved] = useState(true)
-  const [isRightPlantMoved, setRightPlantMoved] = useState(true)
+  const [isChandelierSelected, setChandelierSelected] = useState(chand)
+  const [isChandelierOn, setChandelierOn] = useState(true)
 
   const startLeftPlantStyle = {
     top: '34%',
@@ -37,16 +39,6 @@ const DoorAltToo = () => {
     left: '116%',
     transition: 'left 1s',
   }
-  const startRightPlantStyle = {
-    top: '34%',
-    left: '116%',
-    transition: 'left 1s',
-  }
-  const endRightPlantStyle = {
-    top: '34%',
-    left: '35%',
-    transition: 'left 1s',
-  }
 
   const toggleLeftDoor = () => {
     setLeftDoorSelected(!isLeftDoorSelected)
@@ -60,8 +52,8 @@ const DoorAltToo = () => {
   const moveMidPlant = () => {
     setMidPlantMoved(!isMidPlantMoved)
   }
-  const moveRightPlant = () => {
-    setRightPlantMoved(!isRightPlantMoved)
+  const turnOnChandelier = () => {
+    setChandelierSelected(!isChandelierSelected)
   }
 
   const doorsLeft = isLeftDoorSelected ? door_closed6 : door_open
@@ -72,7 +64,6 @@ const DoorAltToo = () => {
       <button onClick={toggleLeftDoor} className="key_button"></button>
       <img src={doorsLeft} className="door_left" alt={'doors'} />
       <img src={door_closed6} className="door_right" />
-      <button className="chandelier move_right"></button>
       <button
         onClick={moveLeftPlant}
         className="plant move_left"
@@ -84,10 +75,11 @@ const DoorAltToo = () => {
         style={isMidPlantMoved ? startMidPlantStyle : endMidPlantStyle}
       ></button>
       <button
-        onClick={moveRightPlant}
+        onClick={() => setChandelierSelected(ChandelierOn)}
         className="plant move_right"
-        style={isRightPlantMoved ? startRightPlantStyle : endRightPlantStyle}
       ></button>
+      <img src={isChandelierSelected} className="chandelier" />
+      {/* <button className="chandelierOn"></button> */}
     </div>
   )
 }
