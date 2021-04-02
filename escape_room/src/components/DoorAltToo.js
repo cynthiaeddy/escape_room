@@ -9,39 +9,77 @@ import door_closed6 from '../assets/door_closed.jpg'
 
 const DoorAltToo = () => {
   const [isSelected, setSelected] = useState(true)
-  const [isCircleMoved, setCircleMoved] = useState(true)
+  const [isLeftPlantMoved, setLeftPlantMoved] = useState(true)
+  const [isMidPlantMoved, setMidPlantMoved] = useState(true)
+  const [isRightPlantMoved, setRightPlantMoved] = useState(true)
 
-  const startStyle = {
-    top: '185px',
-    left: '25px',
-    transiti5on: 'left 1s',
-  }
-  const endStyle = {
-    top: '185px',
-    left: '315px',
+  const startLeftPlantStyle = {
+    top: '192px',
+    left: '-235px',
     transition: 'left 1s',
+  }
+  const endLeftPlantStyle = {
+    top: '192px',
+    left: '190px',
+    transition: 'left 1s',
+  }
+  const startMidPlantStyle = {
+    top: '192px',
+    left: '190px',
+    transition: 'left 1s',
+  }
+  const endMidPlantStyle = {
+    top: '192px',
+    left: '590px',
+    transition: 'left 1s',
+  }
+  const startRightPlantStyle = {
+    top: '192px',
+    left: '590px',
+    transition: 'right 1s',
+  }
+  const endRightPlantStyle = {
+    top: '192px',
+    left: '190px',
+    transition: 'right 1s',
   }
 
   const toggleDoor = () => {
     setSelected(!isSelected)
   }
-  const moveCircle = () => {
-    setCircleMoved(!isCircleMoved)
+  const moveLeftPlant = () => {
+    setLeftPlantMoved(!isLeftPlantMoved)
+  }
+  const moveMidPlant = () => {
+    setMidPlantMoved(!isMidPlantMoved)
+  }
+  const moveRightPlant = () => {
+    setRightPlantMoved(!isRightPlantMoved)
   }
 
-  const doors = isSelected ? door_closed6 : door_open
+  const doors = isSelected ? door_closed : door_open
   return (
     <div className="door_container">
       <button onClick={toggleDoor} className="key_button"></button>
       <button
-        onClick={moveCircle}
-        className="circle move_right"
-        style={isCircleMoved ? startStyle : endStyle}
+        onClick={moveLeftPlant}
+        className="plant move_right"
+        style={isLeftPlantMoved ? startLeftPlantStyle : endLeftPlantStyle}
       ></button>
 
-      <button className="half_circle move_right"></button>
-      <img alt={'doors'} src={doors} />
-      <img src={door_close5} />
+      <button className="chandelier move_right"></button>
+      <img src={doors} className="door_left" alt={'doors'} />
+      <img src={door_closed} className="door_right" />
+      <button
+        onClick={moveMidPlant}
+        className="plant move_middle"
+        style={isMidPlantMoved ? startMidPlantStyle : endMidPlantStyle}
+      ></button>
+      <button
+        onClick={moveRightPlant}
+        className="plant move_right"
+        style={isRightPlantMoved ? startRightPlantStyle : endRightPlantStyle}
+      ></button>
     </div>
   )
 }
