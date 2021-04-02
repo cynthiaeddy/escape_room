@@ -23,7 +23,7 @@ class Door extends React.Component {
           </button>
         ) : (
           <button className="door_button" onClick={this.doorToggle}>
-            <img src={door_close5} />
+            {/* <img src="../door_closed6.jpg" /> */}
           </button>
         )}
       </div>

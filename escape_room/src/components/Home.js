@@ -4,7 +4,11 @@ import DoorAltToo from './DoorAltToo'
 import Key from './Key'
 
 const Home = () => {
-  return <DoorAltToo />
+  return (
+    <div>
+      <DoorAltToo />
+    </div>
+  )
 }
 
 export default Home
