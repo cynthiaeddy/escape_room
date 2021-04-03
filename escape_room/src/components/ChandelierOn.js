@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import chandOn from '../assets/chandOn.jpg'
+import circlelamp from '../assets/circlelamp.jpg'
+import DoorAltToo from './DoorAltToo'
 
 const ChandelierOn = () => {
   const [chandButton, setchandButton] = useState(true)
-  console.log('hi')
 
   const startButton = {
     top: '20%',
@@ -19,15 +20,16 @@ const ChandelierOn = () => {
 
   return (
     <div>
-      howdy
+      hi
       <button
-        className="meow"
-        // onClick={howdy}
-        // style={chandButton ? startButton : stopButton}
-        onClick={() => setchandButton(chandOn)}
+        className="chandelierOn circlelamp"
+        onClick={howdy}
+        style={chandButton ? startButton : stopButton}
+        onClick={() => setchandButton(chandButton)}
       ></button>
-      {/* <img scr={chandOn} /> */}
-      {/* <button onClick={howdy} className="chand key_button"></button> */}
+      {/* </> */}
+      <img scr={chandOn} />
+      <button onClick={howdy} className="chand key_button"></button>
     </div>
   )
 }

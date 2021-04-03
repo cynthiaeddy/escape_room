@@ -3,7 +3,7 @@
 }
 
 .container {
-	/* overflow: hidden !important; */
+	overflow: hidden !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -37,9 +37,7 @@ button:focus {
 	margin: auto;
 }
 img {
-	/* border: 2px solid black; */
 	width: 100%;
-	/* background: url("assets/plant.jpg") */
 }
 img.door_left {
 	border: 1px solid black;
@@ -62,7 +60,6 @@ img.door_right {
 .plant.move_right {
 	top: 34%;
   left: 116%
-
 }
 .chandelier {
 	width: 47%;
@@ -79,17 +76,17 @@ img.door_right {
 	background: url("assets/chandOn.jpg");
 	background-size: cover;
 	z-index: 40;
-
 }
+
 .chand.key_button {
 	width: 50px;
 	height: 50px;
 }
-/* .chandelierOn {
+.chandelierOn {
 	width: 30px;
-	height: 30px
-
-} */
+	height: 30px;
+	background: cadetblue;
+}
 
 .meow {
 	background: black;
@@ -97,4 +94,8 @@ img.door_right {
 	width: 50px;
 	position: absolute;
 
+}
+
+.circlelamp {
+	width: 40%
 }

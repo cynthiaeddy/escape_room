@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import door_open from '../assets/door_open.jpg'
 import door_open2 from '../assets/door_open2.jpg'
 import door_closed from '../assets/door_closed.jpg'
@@ -6,7 +6,7 @@ import door_closed5 from '../assets/door_closed5.jpg'
 import plant from '../assets/plant.jpg'
 import chand from '../assets/chand.jpg'
 import chandOn from '../assets/chandOn.jpg'
-// import ChandelierOn from './ChandelierOn'
+import ChandelierOn from './ChandelierOn'
 
 const DoorAltToo = () => {
   const [isLeftDoorSelected, setLeftDoorSelected] = useState(true)
@@ -37,6 +37,18 @@ const DoorAltToo = () => {
     transition: 'left 1s',
   }
 
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setMessage('')
+  //   }, 3000)
+  //   return () => clearTimeout(timer)
+  // }, [message])
+
+  useEffect(() => {
+    const timer = setTimeout(() => setRightDoorSelected(door_closed5), 3000)
+    return () => clearTimeout(timer)
+  }, door_open)
+
   const toggleLeftDoor = () => {
     setLeftDoorSelected(!isLeftDoorSelected)
   }
@@ -52,33 +64,39 @@ const DoorAltToo = () => {
   const turnOnChandelier = () => {
     setChandelierSelected(!isChandelierSelected)
   }
-
   const doorsLeft = isLeftDoorSelected ? door_closed5 : door_open2
   const doorsRight = isRightDoorSelected ? door_closed5 : door_open2
 
   return (
-    <div className="door_container">
-      <button onClick={toggleLeftDoor} className="key_button"></button>
-      <button onClick={toggleRightDoor} className="key_button left"></button>
+    <>
+      <div className="door_container">
+        <button onClick={toggleLeftDoor} className="key_button"></button>
+        {/* <button onClick={toggleRightDoor} className="key_button left"></button> */}
 
-      <img src={doorsLeft} className="door_left" alt={'doors'} />
-      <img src={door_closed5} className="door_right" />
-      <button
-        onClick={moveLeftPlant}
-        className="plant move_left"
-        style={isLeftPlantMoved ? startLeftPlantStyle : endLeftPlantStyle}
-      ></button>
-      <button
-        onClick={moveMidPlant}
-        className="plant move_middle"
-        style={isMidPlantMoved ? startMidPlantStyle : endMidPlantStyle}
-      ></button>
-      <button
-        onClick={() => setChandelierSelected(chandOn)}
-        className="plant move_right"
-      ></button>
-      <img src={isChandelierSelected} className="chandOn_click" />
-    </div>
+        <button onClick={toggleRightDoor} className="key_button left"></button>
+
+        {/* <button onClick={() => setMessage('Clicked!')}>Click Me</button> */}
+
+        <img src={doorsLeft} className="door_left" alt={'doors'} />
+        <img src={doorsRight} className="door_right" alt={'doors'} />
+
+        <button
+          onClick={moveLeftPlant}
+          className="plant move_left"
+          style={isLeftPlantMoved ? startLeftPlantStyle : endLeftPlantStyle}
+        ></button>
+        <button
+          onClick={moveMidPlant}
+          className="plant move_middle"
+          style={isMidPlantMoved ? startMidPlantStyle : endMidPlantStyle}
+        ></button>
+        <button
+          onClick={() => setChandelierSelected(chandOn)}
+          className="plant move_right"
+        ></button>
+        <img src={isChandelierSelected} className="chandOn_click" />
+      </div>
+    </>
   )
 }
 export default DoorAltToo
