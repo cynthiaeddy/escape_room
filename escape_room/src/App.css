@@ -26,6 +26,9 @@ button:focus {
 	position: absolute;
 	top: 42%
 }
+.key_button.left {
+	left: -38%
+}
 .door_container {
 	display: flex;
 	position: relative;
@@ -68,9 +71,30 @@ img.door_right {
 	position: absolute;
 	background-size: cover;
 }
-.chandelierOn {
+.chandOn_click {
+	width: 47%;
+	height: 26%;
+	border: none;
+	position: absolute;
+	background: url("assets/chandOn.jpg");
+	background-size: cover;
+	z-index: 40;
+
+}
+.chand.key_button {
+	width: 50px;
+	height: 50px;
+}
+/* .chandelierOn {
 	width: 30px;
 	height: 30px
 
-}
+} */
 
+.meow {
+	background: black;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+
+}

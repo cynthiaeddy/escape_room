@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
-// import door_closed from '../assets/door_closed.jpg'
 import door_open from '../assets/door_open.jpg'
-import door_close2 from '../assets/door_closed.jpg'
-import door_close3 from '../assets/door_closed.jpg'
-import door_close4 from '../assets/door_closed.jpg'
-import door_close5 from '../assets/door_closed.jpg'
-import door_closed6 from '../assets/door_closed6.jpg'
+import door_open2 from '../assets/door_open2.jpg'
+import door_closed from '../assets/door_closed.jpg'
+import door_closed5 from '../assets/door_closed5.jpg'
 import plant from '../assets/plant.jpg'
 import chand from '../assets/chand.jpg'
 import chandOn from '../assets/chandOn.jpg'
-import ChandelierOn from './ChandelierOn'
+// import ChandelierOn from './ChandelierOn'
 
 const DoorAltToo = () => {
   const [isLeftDoorSelected, setLeftDoorSelected] = useState(true)
@@ -56,14 +53,16 @@ const DoorAltToo = () => {
     setChandelierSelected(!isChandelierSelected)
   }
 
-  const doorsLeft = isLeftDoorSelected ? door_closed6 : door_open
-  const doorsRight = isRightDoorSelected ? door_closed6 : door_open
+  const doorsLeft = isLeftDoorSelected ? door_closed5 : door_open2
+  const doorsRight = isRightDoorSelected ? door_closed5 : door_open2
 
   return (
     <div className="door_container">
       <button onClick={toggleLeftDoor} className="key_button"></button>
+      <button onClick={toggleRightDoor} className="key_button left"></button>
+
       <img src={doorsLeft} className="door_left" alt={'doors'} />
-      <img src={door_closed6} className="door_right" />
+      <img src={door_closed5} className="door_right" />
       <button
         onClick={moveLeftPlant}
         className="plant move_left"
@@ -75,11 +74,10 @@ const DoorAltToo = () => {
         style={isMidPlantMoved ? startMidPlantStyle : endMidPlantStyle}
       ></button>
       <button
-        onClick={() => setChandelierSelected(ChandelierOn)}
+        onClick={() => setChandelierSelected(chandOn)}
         className="plant move_right"
       ></button>
-      <img src={isChandelierSelected} className="chandelier" />
-      {/* <button className="chandelierOn"></button> */}
+      <img src={isChandelierSelected} className="chandOn_click" />
     </div>
   )
 }
