@@ -50,10 +50,9 @@ img.door_right {
 .plant {
 	width:31%;
 	height: 40%;
-	border-radius: 45%;
+	border-radius: 46.5%;
 	border: none;
 	position: absolute;
-	background: 'white';
 	background: url("assets/plant.jpg");
 	background-size: cover
 }
@@ -88,14 +87,3 @@ img.door_right {
 	background: cadetblue;
 }
 
-.meow {
-	background: black;
-	height: 50px;
-	width: 50px;
-	position: absolute;
-
-}
-
-.circlelamp {
-	width: 40%
-}

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import door_open from '../assets/door_open.jpg'
 import door_open2 from '../assets/door_open2.jpg'
-import door_closed from '../assets/door_closed.jpg'
 import door_closed5 from '../assets/door_closed5.jpg'
-import plant from '../assets/plant.jpg'
+import door_openparty from '../assets/door_openparty.jpg'
+import door_opendeer from '../assets/door_opendeer.jpg'
+import door_openBird from '../assets/door_openBird.jpg'
+import door_openlaura from '../assets/door_openlaura.jpg'
+
 import chand from '../assets/chand.jpg'
 import chandOn from '../assets/chandOn.jpg'
 import ChandelierOn from './ChandelierOn'
@@ -11,8 +13,6 @@ import ChandelierOn from './ChandelierOn'
 const DoorAltToo = () => {
   const [isLeftDoorSelected, setLeftDoorSelected] = useState(true)
   const [isRightDoorSelected, setRightDoorSelected] = useState('')
-  // const [isRightDoorSelected, setRightDoorSelected] = useState(true)
-
   const [isLeftPlantMoved, setLeftPlantMoved] = useState(true)
   const [isMidPlantMoved, setMidPlantMoved] = useState(true)
   const [isChandelierSelected, setChandelierSelected] = useState(chand)
@@ -39,23 +39,13 @@ const DoorAltToo = () => {
     transition: 'left 1s',
   }
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setMessage('')
-  //   }, 3000)
-  //   return () => clearTimeout(timer)
-  // }, [message])
-
   useEffect(() => {
-    const timer = setTimeout(() => setRightDoorSelected(''), 3000)
+    const timer = setTimeout(() => setRightDoorSelected(''), 1000)
     return () => clearTimeout(timer)
   })
 
   const toggleLeftDoor = () => {
     setLeftDoorSelected(!isLeftDoorSelected)
-  }
-  const toggleRightDoor = () => {
-    setRightDoorSelected(!isRightDoorSelected)
   }
   const moveLeftPlant = () => {
     setLeftPlantMoved(!isLeftPlantMoved)
@@ -66,8 +56,8 @@ const DoorAltToo = () => {
   const turnOnChandelier = () => {
     setChandelierSelected(!isChandelierSelected)
   }
-  const doorsLeft = isLeftDoorSelected ? door_closed5 : door_open2
-  const doorsRight = isRightDoorSelected ? door_open2 : door_closed5
+  const doorsLeft = isLeftDoorSelected ? door_closed5 : door_openlaura
+  const doorsRight = isRightDoorSelected ? door_opendeer : door_closed5
 
   return (
     <>
@@ -75,14 +65,8 @@ const DoorAltToo = () => {
         <button onClick={toggleLeftDoor} className="key_button">
           button left door
         </button>
-        {/* <button onClick={toggleRightDoor} className="key_button left"></button> */}
-
-        {/* <button onClick={toggleRightDoor} className="key_button left">
-          button right door
-        </button> */}
-
         <button
-          onClick={() => setRightDoorSelected(door_closed)}
+          onClick={() => setRightDoorSelected(door_closed5)}
           className="key_button left"
         >
           button right door
