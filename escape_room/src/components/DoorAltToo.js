@@ -10,7 +10,9 @@ import ChandelierOn from './ChandelierOn'
 
 const DoorAltToo = () => {
   const [isLeftDoorSelected, setLeftDoorSelected] = useState(true)
-  const [isRightDoorSelected, setRightDoorSelected] = useState(true)
+  const [isRightDoorSelected, setRightDoorSelected] = useState('')
+  // const [isRightDoorSelected, setRightDoorSelected] = useState(true)
+
   const [isLeftPlantMoved, setLeftPlantMoved] = useState(true)
   const [isMidPlantMoved, setMidPlantMoved] = useState(true)
   const [isChandelierSelected, setChandelierSelected] = useState(chand)
@@ -45,9 +47,9 @@ const DoorAltToo = () => {
   // }, [message])
 
   useEffect(() => {
-    const timer = setTimeout(() => setRightDoorSelected(door_closed5), 3000)
+    const timer = setTimeout(() => setRightDoorSelected(''), 3000)
     return () => clearTimeout(timer)
-  }, door_open)
+  })
 
   const toggleLeftDoor = () => {
     setLeftDoorSelected(!isLeftDoorSelected)
@@ -65,17 +67,26 @@ const DoorAltToo = () => {
     setChandelierSelected(!isChandelierSelected)
   }
   const doorsLeft = isLeftDoorSelected ? door_closed5 : door_open2
-  const doorsRight = isRightDoorSelected ? door_closed5 : door_open2
+  const doorsRight = isRightDoorSelected ? door_open2 : door_closed5
 
   return (
     <>
       <div className="door_container">
-        <button onClick={toggleLeftDoor} className="key_button"></button>
+        <button onClick={toggleLeftDoor} className="key_button">
+          button left door
+        </button>
         {/* <button onClick={toggleRightDoor} className="key_button left"></button> */}
 
-        <button onClick={toggleRightDoor} className="key_button left"></button>
+        {/* <button onClick={toggleRightDoor} className="key_button left">
+          button right door
+        </button> */}
 
-        {/* <button onClick={() => setMessage('Clicked!')}>Click Me</button> */}
+        <button
+          onClick={() => setRightDoorSelected(door_closed)}
+          className="key_button left"
+        >
+          button right door
+        </button>
 
         <img src={doorsLeft} className="door_left" alt={'doors'} />
         <img src={doorsRight} className="door_right" alt={'doors'} />
