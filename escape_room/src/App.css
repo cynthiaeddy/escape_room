@@ -1,6 +1,13 @@
 * {
 	box-sizing: border-box;
 }
+:root {
+	font-size: 62.5%;
+}
+:root body {
+	margin: 0;
+	font-size: 1.6rem;
+}
 
 .container {
 	overflow: hidden !important;
@@ -10,7 +17,46 @@
 	width: 100vw;
 	height: 100vh;
 	background: snow;
+	scroll-behavior: auto;
 }
+.opener_container {
+	width: 80%;
+	justify-content: center;
+	margin: auto;
+	position: relative
+}
+.door_container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	width: 40%;
+	margin: auto;
+}
+.opener {
+border: 1px solid black
+}
+
+
+.opener_words {
+	position: absolute;
+	width: 40%;
+	top: 72%;
+	right:5%;
+}
+p.words, .escape {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	color: white
+}
+span, a {
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+span:hover, a:hover {
+	color: rgba(255, 119, 206, 1)
+}
+
 button {
 	border: 5px solid black;
 }
@@ -19,13 +65,14 @@ button:focus {
 }
 
 .key_button {
-	height: 50px;
-	width: 50px;
-	border: 2px solid black;
+	height: 11%;
+	width: 11%;
+	border: 1px solid black;
 	position: absolute;
-	top: 200px;
-	left: 65px;
+	top: 42%;
+	background: white
 }
+<<<<<<< HEAD
 .door_container {
 	display: flex;
 	position: relative;
@@ -63,9 +110,64 @@ img.final_door {
 	height: 100px;
 	border-radius: 50%;
 	border: 2px solid black;
-	position: absolute;
-	background: 'white';
+=======
+.key_button.left {
+	left: -38%
 }
+img {
+	width: 100%;
+}
+img.door_left {
+	border: 1px solid black;
+	border-right: none;
+}
+img.door_right {
+	border: 1px solid black;
+	border-left: none;
+}
+.plant {
+	width:31%;
+	height: 40%;
+	border-radius: 46.5%;
+	border: none;
+>>>>>>> chand_component
+	position: absolute;
+	background: url("assets/plant.jpg");
+	background-size: cover
+}
+<<<<<<< HEAD
 .circle.move_right {
   transform: translate();
+=======
+.plant.move_right {
+	top: 34%;
+  left: 116%
+>>>>>>> chand_component
 }
+.chandelier {
+	width: 47%;
+	height: 26%;
+	border: none;
+	position: absolute;
+	background-size: cover;
+}
+.chandOn_click {
+	width: 47%;
+	height: 26%;
+	border: none;
+	position: absolute;
+	background: url("assets/chandOn.jpg");
+	background-size: cover;
+	z-index: 40;
+}
+
+.chand.key_button {
+	width: 50px;
+	height: 50px;
+}
+.chandelierOn {
+	width: 30px;
+	height: 30px;
+	background: cadetblue;
+}
+
