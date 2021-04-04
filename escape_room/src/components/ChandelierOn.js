@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import chandOn from '../assets/chandOn.jpg'
-import circlelamp from '../assets/circlelamp.jpg'
 import DoorAltToo from './DoorAltToo'
 
 const ChandelierOn = () => {
@@ -22,7 +21,7 @@ const ChandelierOn = () => {
     <div>
       hi
       <button
-        className="chandelierOn circlelamp"
+        className="chandelierOn "
         onClick={howdy}
         style={chandButton ? startButton : stopButton}
         onClick={() => setchandButton(chandButton)}
