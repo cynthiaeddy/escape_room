@@ -72,45 +72,6 @@ button:focus {
 	top: 42%;
 	background: white
 }
-<<<<<<< HEAD
-.door_container {
-	display: flex;
-	position: relative;
-	/* justify-content: center; */
-	width: 60%;
-  height: fit-content
-	/* margin: auto; */
-}
-
-img.outer_door {
-  width: 100%;
-  border: 2px solid black;
-  z-index: 10;
-  position: absolute;
-  top: -16vh
-}
-
-img.inner_door {
-  width: 75%;
-  border: 2px solid black;
-  z-index: 1;
-  position: absolute;
-  top: -6vh;
-  left: 7vw
-}
-
-img.final_door {
-  border: 2px solid black;
-  width: 50%;
-  margin-left: 15vw;
-  margin-top: 3vh;
-}
-.circle {
-  width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	border: 2px solid black;
-=======
 .key_button.left {
 	left: -38%
 }
@@ -130,19 +91,13 @@ img.door_right {
 	height: 40%;
 	border-radius: 46.5%;
 	border: none;
->>>>>>> chand_component
 	position: absolute;
 	background: url("assets/plant.jpg");
 	background-size: cover
 }
-<<<<<<< HEAD
-.circle.move_right {
-  transform: translate();
-=======
 .plant.move_right {
 	top: 34%;
   left: 116%
->>>>>>> chand_component
 }
 .chandelier {
 	width: 47%;

@@ -10,13 +10,13 @@ const Opener = () => {
         <p className="words">
           This is a escape game paying omage to{' '}
           <span>
-            <a href="http://www.rustylake.com/adventure-games/the-white-door.html/">
+            <a href="http://www.rustylake.com/adventure-games/the-white-door.html">
               The White Door{' '}
             </a>
           </span>
           game by
           <span>
-            <a href="http://www.rustylake.com/"> Rusty Lake</a>
+            <a href="http://www.rustylake.com"> Rusty Lake</a>
           </span>
           . I've taken the liberty of using their images and barely touching on
           the storyline itself.
