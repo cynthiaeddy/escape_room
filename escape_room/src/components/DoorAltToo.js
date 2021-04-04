@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import door_open2 from '../assets/door_open2.jpg'
 import door_closed5 from '../assets/door_closed5.jpg'
-import door_openparty from '../assets/door_openparty.jpg'
 import door_open2dr from '../assets/door_open2dr.jpg'
-import door_openBird from '../assets/door_openBird.jpg'
 import door_open2la from '../assets/door_open2la.jpg'
 
 import chand from '../assets/chand.jpg'

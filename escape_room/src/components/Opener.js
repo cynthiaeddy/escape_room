@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import opener from '../assets/image1opener.jpg'
-import opener2 from '../assets/image1opener85.jpg'
+import opener from '../assets/image1opener85.jpg'
 
 const Opener = () => {
   return (
     <div className="opener_container">
-      <img src={opener2} className="opener" />
+      <img src={opener} className="opener" />
       <div className="opener_words">
         <p className="words">
           This is a escape game paying omage to{' '}
