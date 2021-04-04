@@ -36,7 +36,6 @@
 border: 1px solid black
 }
 
-
 .opener_words {
 	position: absolute;
 	width: 40%;
@@ -57,24 +56,36 @@ span:hover, a:hover {
 	color: rgba(255, 119, 206, 1)
 }
 
-button {
-	border: 5px solid black;
-}
 button:focus {
 	outline: 0;
 }
-
-.key_button, .chand_button {
-	height: 11%;
-	width: 11%;
-	border: 1px solid black;
+.key_button {
+	height: 15%;
+	width: 12%;
+	top: 39%;
+	left: 44%;
+	border: none;
 	position: absolute;
-	top: 42%;
-	background: white
+	background: url('assets/buttonPink.jpg');
+	background-size: cover;
+
 }
+.key_button:hover {
+	height: 15%;
+	width: 12%;
+	top: 39%;
+	left: 44%;
+	border: none;
+	position: absolute;
+	background: url('assets/buttonRed.jpg');
+	background-size: cover;
+
+}
+
 .key_button.left {
-	left: -38%
+	left: -39%
 }
+
 img {
 	width: 100%;
 }
@@ -95,7 +106,7 @@ img.door_right {
 	background: url("assets/plant.jpg");
 	background-size: cover
 }
-.plant.move_right {
+.plant.right {
 	top: 34%;
   left: 116%
 }
@@ -116,16 +127,11 @@ img.door_right {
 	z-index: 40;
 }
 
-.chand.key_button {
-	width: 50px;
-	height: 50px;
+@media (min-width: 1300px) {
+	.door_container {
+		width: 30%
+	}
+	.opener_container {
+		width: 60%
+	}
 }
-.chandelierOn {
-	width: 30px;
-	height: 30px;
-	background: cadetblue;
-}
-.chand_button {
-visibility: hidden;
-}
-

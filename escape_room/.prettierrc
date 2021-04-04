@@ -1,9 +1,5 @@
 {
   "tabWidth": 2,
-<<<<<<< HEAD
-  "useTabs": false
-=======
   "semi": false,
   "singleQuote": true
->>>>>>> chand_component
 }
