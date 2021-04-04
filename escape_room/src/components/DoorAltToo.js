@@ -36,6 +36,11 @@ const DoorAltToo = () => {
     transition: 'left 1s',
   }
 
+  const activateChandButton = {
+    visibility: 'visable'
+
+  }
+
   useEffect(() => {
     const timer = setTimeout(() => setRightDoorSelected(''), 1000)
     return () => clearTimeout(timer)
@@ -50,16 +55,27 @@ const DoorAltToo = () => {
   const moveMidPlant = () => {
     setMidPlantMoved(!isMidPlantMoved)
   }
-  const turnOnChandelier = () => {
-    setChandelierSelected(!isChandelierSelected)
+  // const turnOnChandelier = () => {
+  //   setChandelierSelected(!isChandelierSelected)
+  // }
+
+  const chandActiveButton = () => {
+    setChandelierSelected(chandOn)
+    setChandelierOn(console.log('hi'))
+
   }
+
+
   const doorsLeft = isLeftDoorSelected ? door_closed5 : door_open2la
   const doorsRight = isRightDoorSelected ? door_open2dr : door_closed5
 
   return (
     <>
       <div className="door_container">
-        <button onClick={toggleLeftDoor} className="key_button">
+        <button onClick={toggleLeftDoor}
+
+
+          className="key_button">
           button left door
         </button>
         <button
@@ -78,12 +94,13 @@ const DoorAltToo = () => {
           style={isLeftPlantMoved ? startLeftPlantStyle : endLeftPlantStyle}
         ></button>
         <button
+          disabled={isChandelierOn}
           onClick={moveMidPlant}
           className="plant move_middle"
           style={isMidPlantMoved ? startMidPlantStyle : endMidPlantStyle}
         ></button>
         <button
-          onClick={() => setChandelierSelected(chandOn)}
+          onClick={chandActiveButton}
           className="plant move_right"
         ></button>
         <img src={isChandelierSelected} className="chandOn_click" />
@@ -92,3 +109,6 @@ const DoorAltToo = () => {
   )
 }
 export default DoorAltToo
+
+
+  // <button  onClick={() => setLeftDoorSelected(isChandelierOn)

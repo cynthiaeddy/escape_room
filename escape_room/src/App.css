@@ -64,7 +64,7 @@ button:focus {
 	outline: 0;
 }
 
-.key_button {
+.key_button, .chand_button {
 	height: 11%;
 	width: 11%;
 	border: 1px solid black;
@@ -124,5 +124,8 @@ img.door_right {
 	width: 30px;
 	height: 30px;
 	background: cadetblue;
+}
+.chand_button {
+visibility: hidden;
 }
 
