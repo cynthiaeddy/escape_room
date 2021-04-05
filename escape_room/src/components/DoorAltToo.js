@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import door_closed5 from '../assets/door_closed5.jpg'
 import door_open2dr from '../assets/door_open2dr.jpg'
-import door_open2la from '../assets/door_open2la.jpg'
+import door_open2laurarotate from '../assets/door_open2laurarotate.jpg'
 import chand from '../assets/chand.jpg'
 import chandOn from '../assets/chandOn.jpg'
 
@@ -56,7 +56,7 @@ const DoorAltToo = () => {
   return (
     <div className="door_container">
       <button
-        onClick={() => setLeftDoorSelected(door_open2la)}
+        onClick={() => setLeftDoorSelected(door_open2laurarotate)}
         className="key_button"
       ></button>
       <button

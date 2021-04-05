@@ -136,6 +136,7 @@ img.door_right {
 		width: 60%
 	}
 }
+
 @media (min-width: 1090px) and (max-width: 1224px) {
 p.words, a.escape {
 		font-size: 1.4rem;
@@ -147,19 +148,29 @@ p.words, a.escape {
 		width: 20%;
     top: 38%;
 	}
-	}
+}
 
 @media (min-width: 600px) and (max-width: 849px) {
 	.opener_words {
 		right: 3%;
     width: 20%;
     top: 0%;
-}
 	}
+}
+
 	@media (max-height: 450px) and (max-width: 900px) {
 		.opener_words {
-
 			top: 22%;
+		}
 	}
 
+	@media (max-height: 350px) and (max-width: 570px) {
+		.opener_words {
+			top: 0%;
+			background: black;
+			width:45%;
+			padding: 2%
 	}
+}
+
+
