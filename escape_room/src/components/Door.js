@@ -5,7 +5,7 @@ import door_open2laurarotate from '../assets/door_open2laurarotate.jpg'
 import chand from '../assets/chand.jpg'
 import chandOn from '../assets/chandOn.jpg'
 
-const DoorAltToo = () => {
+const Door = () => {
   const [isLeftDoorSelected, setLeftDoorSelected] = useState(door_closed5)
   const [isRightDoorSelected, setRightDoorSelected] = useState('')
   const [isLeftPlantMoved, setLeftPlantMoved] = useState(true)
@@ -83,4 +83,4 @@ const DoorAltToo = () => {
     </div>
   )
 }
-export default DoorAltToo
+export default Door

@@ -8,7 +8,7 @@ const Opener = () => {
       <img src={opener} className="opener" />
       <div className="opener_words">
         <p className="words">
-          This is a escape game paying homage to{' '}
+          This is a simple escape game paying homage to{' '}
           <span>
             <a href="http://www.rustylake.com/adventure-games/the-white-door.html">
               The White Door{' '}
